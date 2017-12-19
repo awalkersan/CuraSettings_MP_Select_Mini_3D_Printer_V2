@@ -1,0 +1,11 @@
+;;;START GCODE
+
+G28; home the printer
+G92 E0; reset the extruder to 0
+G0 Z5 E5 F500; move up and prime the nozzle
+G0 X-1 Z0; move outside the printable area
+G1 Y60 E8 F500; draw a priming/wiping line to the rear
+G1 X-1; move a little closer to the print area
+G1 Y10 E16 F500; draw more priming/wiping
+G1 E15 F250; small retract
+G92 E0; zero the extruder

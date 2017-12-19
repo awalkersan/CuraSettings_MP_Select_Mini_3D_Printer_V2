@@ -1,0 +1,10 @@
+;;;END GCODE
+
+M104 S0; turn off extruder/hotend heat
+M140 S0; turn off bed heat
+G91; relative positioning
+G1 E-1 F300; retract the filament before lifting the nozzle to release some of the pressure
+G1 Z+1 E-2 F300; move Z up and retract filament 2mm
+G90; absolute positioning
+G1 X20 Y115 F1000; move bed forward and hotend towards the tower
+M84; disable motors
